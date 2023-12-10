@@ -1,13 +1,14 @@
 <?php
     // Llamada al modelo
-    require_once "./Models/Consulta1Model.php";
 
     if (file_exists("../Db/Con1Db.php")){
         // Llamada a la conexión
         require_once "../Db/Con1Db.php";
+        require_once "../Models/Consulta1Model.php";
     }
     elseif(file_exists("./Db/Con1Db.php")){
         require_once "./Db/Con1Db.php";
+        require_once "./Models/Consulta1Model.php";
 
     }
 

@@ -183,8 +183,7 @@ window.addEventListener('load', function(){
   }
 
 
-  const formEdicion1 = document.getElementById("formEdicion1");
-
+  
   document.getElementById("contenedor2").addEventListener("click", function(event) {
     if (event.target.classList.contains("botonConsulta3")) {
         //console.log(event.target);
@@ -198,58 +197,37 @@ window.addEventListener('load', function(){
     }
   });
 
-var modalEdicion = document.getElementById("modalEdicion");
+  var modalEdicion = document.getElementById("modalEdicion");
 
-window.onclick = function(event) {
-  if (event.target == modalEdicion) {
-    modalEdicion.style.display = "none";
+  window.onclick = function(event) {
+    if (event.target == modalEdicion) {
+      modalEdicion.style.display = "none";
+    }
   }
-}
-  
 
+  // Paso 1: Obtener referencias:
+  const formEdicion1 = document.getElementById("formEdicion1");
+  // Paso 2 - Asociación del elemento al evento (submit) y llamada a la función
+  if(formEdicion1)
+  {
+    // Referencia de los elementos
+    boton1 = document.getElementById("botonConsulta1");
+    controlador1 = "Controllers/Consulta4Controller.php";
+    div1 = document.getElementById("contenedor2");
+    // Evento y llamada a la función
+    formEdicion1.addEventListener("submit", function(event){
+      event.preventDefault();
+      seleccionarDatos1(formEdicion1,boton1,controlador1,div1);
 
-
-
-
-  
-
-  
-
-
-    //var botonConsulta3 = document.querySelectorAll(".botonConsulta3");
-
-    /*
-      console.log(botonConsulta3);
-      if(botonConsulta3){
-        console.log("Existe 1");
-
-
-        botonConsulta3.addEventListener("click", function() {
-          console.log("Se hizo clic en la celda 3");
-        });
-        botonConsulta3.dispatchEvent(new Event("click"));
-
-        botonConsulta3.forEach(function(elemento) {
-          console.log("1");
-          elemento.addEventListener("click", function(event) {
-            event.preventDefault();
-            // Función que se ejecutará al hacer clic en cada elemento
-            console.log('Se hizo clic en:', elemento.textContent);
-            // Puedes realizar otras acciones aquí
-          });
-        });
-      }
-  */
+      controlador2 = "Controllers/Consulta2Controller.php";
+      div2 = document.getElementById("contenedor2");
+      seleccionarDatos2(formConsulta1,botonConsulta2,controlador2,div2);
+      modalEdicion.style.display = "none";
+    });
+  }
 
   
-  
 
-      
-  
-  
-  
-
- 
 
   /* ---------------------------------- FIN - (click) Seleccionar 2 */
 

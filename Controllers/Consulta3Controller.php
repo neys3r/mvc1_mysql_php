@@ -38,11 +38,11 @@ $valor = empty($_GET['valor']) ? '' : $_GET['valor'];
             "
 
             <form id='formEdicion1' class='bloque1'>
-                    <input type='text' id='textoEdicion1' name='textoEdicion1' class='campo1' value='$row->ide_coc' disabled>
+                    <input type='text' id='textoEdicion1' name='textoEdicion1' value='$row->ide_coc' class='campo1' readonly>
                     <input type='text' id='textoEdicion2' name='textoEdicion2' value='$row->mar_coc' class='campo1' >
                     <input type='text' id='textoEdicion3' name='textoEdicion3' value='$row->mod_coc' class='campo1' >
                     <input type='number' id='textoEdicion4' name='textoEdicion4' value='$row->aut_coc' class='campo1' placeholder='Autonomía'>
-                    <input type='submit' id='botonInsercion1' name='botonInsercion1' value='Actualizar' class='boton1'>
+                    <input type='submit' id='botonEdicion1' name='botonEdicion1' value='Actualizar' class='boton1'>
             </form>
 
             ";
